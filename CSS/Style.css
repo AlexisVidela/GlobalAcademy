@@ -1,0 +1,38 @@
+/*style con LLAMADO DE ETIQUETA*/
+body {
+    background-color: grey;
+}
+
+th{
+    background-color: cadetblue;
+    border: 1px solid black;
+    font-family: 'Times New Roman', Times, serif;
+}
+td{
+    /*center texto*/
+    text-align: center;
+    /*el padding me separa el contenido del borde*/
+    padding: 5px;
+}
+/*
+img{
+    width: 30%; reduccion de la imagen
+    aspect-ratio: 16/9; estilo de pantalla
+    object-fit: contain; mantenga el formato sin estirar
+} */
+
+
+/*por clase, para darle un style*/
+.divtabla{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*por ID*/
+#tablaid {
+    border: 2px solid red;
+    background-color: aqua;
+    /*para evitar la separacion de los bordes. los vamosa juntar con..*/
+    border-collapse: collapse;
+}
