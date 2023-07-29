@@ -3,81 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario HTML</title>
     <link rel="stylesheet" href="CSS/Style.css"><!--Simpre dentro del Head-->
 </head>
 <body>
-    <a href="https://github.com/AlexisVidela" target="_blank"> Github alexis</a> <!--referencia de vinculo _blanck(new pestania) _self(misma pestania)-->
-    <br>
-    <!--imagen web-->
-    <img width="250" src="https://th.bing.com/th/id/OIP.H9DpFQDdO8OC7geIcLnH-QHaE9?pid=ImgDet&rs=1" alt="imagen Yamaha R1"> <!--imagen remotas o globales src(vinculo)-->
-    <br>
-    <!--imagen remota-->
-    <img width="250" src="Image/fdp.jpg" alt="Imagen de Yamaha R1 Blue">
-    <h3>Caracteristicas</h3>
-    
-    <!--Lista Desordenada-->
-    <ul>
-        <!--List Item-->
-        <li>roja</li>
-        <li>12 lts</li>
-        <li>250k/hs</li>
-    </ul>
-    
-    <h3>Tipos de Cilindraje</h3>
+    <!DOCTYPE html>
+    <html>
+        <head>
+        </head>
+        <body>
+            <!--creacion del formulario-->
+            <div>
+                <h3>Formulario de registro</h3>
+                <form action=""><!--ubicar todas las etiquetas de input dentro del form-->
+                  <label for="Nombre">Nombre</label>
+                  <input type="text" class="inputStyle">
+                  <label for="Apellido">Apellido</label>
+                  <input type="text" class="inputStyle">  
+                  <label for="Domicilio">Domicilio</label>
+                  <input type="text" class="inputStyle">  
+                  <label for="Telefono">Telefono</label>
+                  <input type="text" class="inputStyle" placeholder="codigo de area,sin 0 y sin 15 ">    
+                  <label for="Genero">Genero</label>
+                  <select name="" id="">
+                    <option value="" selected>Seleccione un genero</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                    <option value="O">Otros</option>
+                  </select>
 
-    <!--Lista Ordenada-->
-    <ol type="A">
-            <li>R1 1000cc</li>
-            <li>R6 600cc</li>
-            <li>R3 300cc</li>
-    </ol>
-    
-    <br>
+                  <input type="submit" value="Enviar" class="bte_Style">
+                  <button type="reset" class="btc_Style">Cancelar</button> <!--formatu submit para enviar inf ...sino no se envia-->
+                </form>
+            </div>
+        </body>
+    </html>
 
-    <ol start="4">
-        <li>R1 1000cc</li>
-        <li>R6 600cc</li>
-        <li>R3 300cc</li>
-    </ol>
-
-
-
-
-    <!--Video solo-->
-    <video autoplay width="400" src="Video/Ford_Munstang.mp4"></video>
-    <br>
-    <!--Video con reproductor-->
-    <iframe width="400" src="Video/Ford_Munstang.mp4" frameborder="0"></iframe>
-    <br>
-    <!--Video web-->
-    <iframe width="400" height="240" src="https://www.youtube.com/embed/Noj5zwdvuFU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
-
-    <title>Tablas</title>
-    
-    <div class="divtabla"> 
-        <table id="tablaid"><!--todo lo de adentro va a estar en formato tabla-->
-            <thead><!--titulos-->
-                <th>Nombre</th> <!--nombre del los encabezados-->
-                <th>Apellido</th>
-                <th>Domicilio</th>
-                <th>Telefono</th>
-
-            </thead>
-            <tbody><!--cuerpo de la tabla-->
-                <tr><!--filas-->
-                    <td>Alexis</td><!--datos-->
-                    <td>Videla</td>
-                    <td>Gyil831</td>
-                    <td>4662645</td>
-
-                </tr>
-
-
-            </tbody>
-        </table>
-    </div>
 </body>
 </html>

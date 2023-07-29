@@ -1,19 +1,52 @@
 /*style con LLAMADO DE ETIQUETA*/
 body {
     background-color: grey;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-th{
-    background-color: cadetblue;
-    border: 1px solid black;
-    font-family: 'Times New Roman', Times, serif;
+form{
+    max-width: 300px;
+    margin: 0px;/**separa entre elementos*/
 }
-td{
-    /*center texto*/
-    text-align: center;
-    /*el padding me separa el contenido del borde*/
-    padding: 5px;
+label{
+ display: block;
+ margin-top: 15px;
 }
+
+.inputStyle{
+    border: 1px solid blue;
+    border-radius: 45px;
+    padding: 3px;
+}
+select{
+    display: block;
+    appearance: none; /*desaparece la flechita de bajar*/
+    margin-bottom: 15px;
+    border: 1px solid blue;
+    border-radius: 45px;
+    padding: 3px;
+}
+.bte_Style{
+ background-color: aquamarine;
+ color: rgb(253, 253, 253);
+ border-radius: 10px;
+ padding: 3px 10px;
+ border: 0px;
+ cursor: pointer;
+}
+.btc_Style{
+    background-color: rgb(240, 108, 56);
+    color: rgb(252, 252, 252);
+    border-radius: 10px;
+    padding: 3px 6px;
+    border: 0px;
+    cursor: pointer;
+   }
+
+.bte_Style:hover {
+    background-color: white;
+    color: aquamarine;
+   }
 /*
 img{
     width: 30%; reduccion de la imagen
@@ -21,18 +54,3 @@ img{
     object-fit: contain; mantenga el formato sin estirar
 } */
 
-
-/*por clase, para darle un style*/
-.divtabla{
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-/*por ID*/
-#tablaid {
-    border: 2px solid red;
-    background-color: aqua;
-    /*para evitar la separacion de los bordes. los vamosa juntar con..*/
-    border-collapse: collapse;
-}
