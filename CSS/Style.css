@@ -1,56 +1,21 @@
 /*style con LLAMADO DE ETIQUETA*/
-body {
-    background-color: grey;
-    font-family: Arial, Helvetica, sans-serif;
+#grid{
+    /*vamos a decirle que su contenido va a hacer una grilla*/
+    display: grid;
+    /*Armar plantillas de columnas y plantillas de filas*/
+    grid-template-columns: repeat(5,1fr) ; /*repetir 1fr 5 veces*/
+    grid-template-rows: 1fr 1fr; /*fr: free space {lo divide en partes iguales dependiendo la pantalla}*/
+    grid-gap: 1vw; /*separacion entre cada elem de la grilla*/
+    background-color: aqua;
 }
 
-form{
-    max-width: 300px;
-    margin: 0px;/**separa entre elementos*/
+.grid-div{
+    font-size: 25px;
+    background-color: blue;
+    color: white;
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+    margin: 5px;
 }
-label{
- display: block;
- margin-top: 15px;
-}
-
-.inputStyle{
-    border: 1px solid blue;
-    border-radius: 45px;
-    padding: 3px;
-}
-select{
-    display: block;
-    appearance: none; /*desaparece la flechita de bajar*/
-    margin-bottom: 15px;
-    border: 1px solid blue;
-    border-radius: 45px;
-    padding: 3px;
-}
-.bte_Style{
- background-color: aquamarine;
- color: rgb(253, 253, 253);
- border-radius: 10px;
- padding: 3px 10px;
- border: 0px;
- cursor: pointer;
-}
-.btc_Style{
-    background-color: rgb(240, 108, 56);
-    color: rgb(252, 252, 252);
-    border-radius: 10px;
-    padding: 3px 6px;
-    border: 0px;
-    cursor: pointer;
-   }
-
-.bte_Style:hover {
-    background-color: white;
-    color: aquamarine;
-   }
-/*
-img{
-    width: 30%; reduccion de la imagen
-    aspect-ratio: 16/9; estilo de pantalla
-    object-fit: contain; mantenga el formato sin estirar
-} */
 
