@@ -1,0 +1,22 @@
+.grid{
+    display: grid;
+    grid-gap: 5px;
+    margin: 10px;
+}
+.auto-fit{
+    /*si ya no tengo elementos, no voy a seguir estirando el lugar, simplemente termino*/
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+.auto-fill{
+    /*si no tengo mas elementos COMPLETO CON LOS QUE TEGO DENTRO*/
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    /*grid-template-rows: repeat(auto-fill,minmax(200px,1fr));*/
+}
+
+.grid > div { /*aplica estos css a los div que hereden el grid*/
+    background-color: yellow;
+    font-size: 1.5em;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid black;
+   }
