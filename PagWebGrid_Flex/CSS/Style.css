@@ -1,0 +1,64 @@
+body{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-rows: 15%,1fr,5%;
+    grid-template-columns: 1fr,1fr;
+    margin: 0 auto;
+    text-align: center;
+    height: 100vh;
+}
+
+.divheader{
+    grid-area: header;
+    background-color: bisque;
+}
+.divmain{
+    grid-area: main;
+}
+.divfooter{
+    grid-area: footer;
+}
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.4em;
+}
+nav ul{
+    display: flex;
+    flex: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.5em;
+}
+a{
+    /*le quitamos la decoracion(subrayado)a los elemt de tipo link */
+    text-decoration: none;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: cornflowerblue;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid black;
+
+}
+.card img{
+    width: 200px;
+    /*solucion de imagenes de dif tamaños*/
+    aspect-ratio: 16/9;
+    object-fit: contain;
+}
+.divmain{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    justify-items: center;
+    background-image: linear-gradient(to right, blue,green);
+}
+.divfooter{
+    background-color: blueviolet;
+    color: white;
+}
