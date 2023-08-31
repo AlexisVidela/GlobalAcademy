@@ -16,20 +16,21 @@ selecion a traves de class usamos el "."
 */
 .contenedor3{
     background-color: brown;
+    font-family: var(--fuenteparrafo);
 }
 .container{
-    background-color: yellowgreen;
-    border: 2px dotted black;
+    background-color: var(--colorheader);
+    border: 2px dotted rgb(73, 73, 73);
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 40px;
-    color: black;
+    font-size: 60px;
+    color: rgb(155, 146, 127);
     /*bordes al texto*/
-    -webkit-text-stroke: 1px white;
-    text-shadow: -6px 5px 0 blue;
+    -webkit-text-stroke: 0.5px rgb(255, 251, 0);
+    text-shadow: -1px 5px 0 black;
     /*separacion: -contenido del borde y los elementos entre si*/
     padding: 5px;/*contenido con sus bordes*/
-    margin: 5px;/*contenido con otros elementos*/
+    margin:0px;/*contenido con otros elementos*/
     /*las separaciones tiene sus propios atributos individuales:
     margin-top
     margin-bottom
@@ -37,4 +38,46 @@ selecion a traves de class usamos el "."
     margin-right
     padding-top...etc
     */
+}
+
+
+/*parametros y variables globales*/
+
+/*variables*/
+:root{
+--fuenteparrafo :'Times New Roman', Times, serif ;
+--fuenteheader : Arial, Helvetica, sans-serif;
+--negro : black ;
+--colorheader : rgb(76, 158, 120);
+
+}
+/*propiedad*/
+html{
+box-sizing: border-box/*todo pagedo*/ ;/*comportamiento del html en lo alto-ancho- */
+font-size: 62.5% ; /*1rem = 10px*/
+}
+/*parametros globales*/
+*,*::before,*::after{
+ margin: 0 auto;
+ box-sizing: inherit;
+}
+
+
+/*utilidades de clases : nos permiten dar una propiedad y que utilizaremos con frecuencia */
+.no-margin{
+    margin:  0;
+    color: blueviolet;
+}
+.no-padding{
+    padding: 0;
+    color: darkslateblue;
+}
+
+/*hover: nos va a indicar que va a suceder cuando pasemos el mouse por ensima
+para usarlo hay que llamar a la class y pasarle un selector que es :hover
+*/
+.container:hover{
+    background-color: black;
+    color: aliceblue;
+    font-size: 10px;
 }
