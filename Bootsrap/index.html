@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Bootstrap</title>
+</head>
+<body>
+    <header class="cabecera container-fluid">
+        <h1 class="text-center">Mi Tienda Web</h1>
+        <nav class="navbar navbar-expand-xxl navbar-ligth">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-oculto" aria-controls="menu-oculto" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu-oculto">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-2">
+                        <li class="nav-item">Home</li>
+                        <li class="nav-item">Articulos</li>
+                        <li class="nav-item">Contactos</li>
+                        <li class="nav-item">Mas Info</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+    <hr>
+    <h1>Contenedor</h1>
+    <div class="contenedor-primario">
+        <h4>contenedor bootstrap</h4>
+        <p>este es un cpntenido del contenedor</p>
+        <p>pie del contenedor</p>
+    </div>
+    <hr>
+    <h1>Display Grid clasico</h1>
+    <div class="grid-example">
+        <div class="grid-elem">Elemento 1</div>
+        <div class="grid-elem">Elemento 2</div>
+        <div class="grid-elem">Elemento 3</div>
+    </div>
+    <hr>
+    <h1>Display Grid Bootstrap</h1>
+    <div class="row"><!--fila-->
+        <div class="col-1 grid-elem">Elemento 1</div><!--columna del tipo 1 (max 12)-->
+        <div class="col-2 grid-elem">Elemento 2</div>
+        <div class="col-9 grid-elem">Elemento 3</div>
+    </div>
+
+    <h1>Tablas en Bootstrap</h1>
+    <h3>Tablas Clasicas</h3>
+    <table>
+        <thead>
+            <th>User</th>
+            <th>Email</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ale</td>
+                <td>Ale@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Shei</td>
+                <td>Sat@hotmail.com</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <h3>Tablas Bootstrap</h3>
+    <table class="table table-hover table-striped caption-top"> <!--tb-strp colorea intercalado las filas tb-hover: marcal la seccion selecionada-->
+        <thead class="table-dark">
+            <th scope="col">User</th>
+            <th scope="col">Email</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ale</td>
+                <td>Ale@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Juniors</td>
+                <td>Jr2019@hotmail.com</td>
+            </tr>
+            <tr>
+                <td>Shei</td>
+                <td>Sat@hotmail.com</td>
+            </tr>
+            <tr>
+                <td>coco</td>
+                <td>coco@hotmail.com</td>
+            </tr>
+        </tbody>
+        <caption>Lista de Usuarios</caption>
+
+    </table>
+
+    <hr>
+    <h1>Formularios</h1>
+    <h3>Formulario clasico</h3>
+    <form class="formulario" action="">
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name" placeholder="Ingrese su usuario">
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" id="password" placeholder="Ingrese contraseña">
+    </form>
+    <hr>
+    <h3>Formulario Bootstrap</h3>
+    <div class="container-sm w-25 p-3 border border-3 rounded-3 border-black">
+    <!--contenedor-chico with-25 paddin-3 borde -borde-3 radius-3 borde-black-->
+        <form  action="">
+            <div class="form-floating">
+                <input class="form-control" type="text" name="name" id="name" placeholder="Ingrese su usuario">
+                <label for="name" class="form-label">Nombre</label>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input class="form-control" type="password" name="password" id="password" placeholder="Ingrese contraseña">
+            </div>
+            <button class="btn btn-primary" >Envia</button>
+        </form>
+    </div>
+</body>
+</html>
