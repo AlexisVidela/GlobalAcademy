@@ -1,0 +1,47 @@
+body{
+    background-color: gray;
+}
+.calculadora{
+    background-color: beige;
+    margin: 15% auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    max-width: 350px;
+}
+.botones{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 5px;
+}
+.pantalla{
+    background-color: darkcyan;
+    margin-bottom: 10px ;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    text-align: right;
+    padding: 3px;
+    font-size: larger;
+    
+}
+.cal-button{
+    background-color: darkgray;
+}
+.cal-button-delete{
+    background-color: red;
+    color: aliceblue;
+}
+.button{
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+.cal-button:hover{
+    background-color: white;
+}
+.cal-button-delete:hover{
+    background-color: white;
+    color: red;
+}
