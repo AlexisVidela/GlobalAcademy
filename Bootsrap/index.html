@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style.css">
     <title>Bootstrap</title>
 </head>
@@ -19,8 +22,17 @@
                 <div class="collapse navbar-collapse" id="menu-oculto">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-2">
                         <li class="nav-item">Home</li>
-                        <li class="nav-item">Articulos</li>
-                        <li class="nav-item">Contactos</li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" id="dropmenu" data-bs-toggle="dropdown">Articulos</button>
+                                <ul class="dropdown-menu" aria-labelledby="dropmenu">
+                                    <li class="dropdown-item">Calzado</li>
+                                    <li class="dropdown-item">Ropa deportiva</li>
+                                    <li class="dropdown-item">elememto deportivo</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item"><button class="btn" type="button" data-bs-target="#modalcontacto" data-bs-toggle="modal">Contactos</button></li> <!--tipo de bt, id del bt(databstarget),funcion que utiliza como ventana emergente(databstoggle) -->
                         <li class="nav-item">Mas Info</li>
                     </ul>
                 </div>
@@ -28,7 +40,35 @@
         </nav>
     </header>
 
+<!--crear modal-->
+<div class="modal fade" id="modalcontacto" tabindex="-1" aria-hidden="true" aria-labelledby="modalcontacto">
+<!--clase y tipo "aparezca", id, que aparezca dentro dela pantalla-->
+<!--que sea invisible,identificar el elemento-->
+    <div class="modal-dialog"><!--ventana de dialogo-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Contacto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <label class="form-label" for="">Nombre</label>
+                <input class="form-control" type="text" name="" id="" placeholder="Ingrese su nombre">
+                <label class="form-label" for="">Email</label>
+                <input class="form-control" type="email" name="" id="" placeholder="Ingrese email">
+                <label class="form-label" for="">Consulta</label>
+                <textarea class="form-control" placeholder="Escribir" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="modal-footer">
+                <div class="mt-3">
+                    <button class="btn btn-success">Enviar</button>
+                    <button class="btn btn-danger">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+
+</div>
 
 
 
@@ -124,6 +164,7 @@
                 <input class="form-control" type="password" name="password" id="password" placeholder="Ingrese contraseña">
             </div>
             <button class="btn btn-primary" >Envia</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="boton con info" data-bs-content="aqui esta el contenido extra">@@</button>
         </form>
     </div>
 </body>
