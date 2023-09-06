@@ -1,0 +1,130 @@
+/*parametros globales de nuestra web*/
+/*root hace referencia a la raiz de nuestro html: aui creamos las variables*/
+:root{
+    --FontTitleH5:'Kanit', sans-serif;
+    --FontTitleH3: 'Bebas Neue', sans-serif;
+}
+
+/*parametros del html y body*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*(1rem= 10px)*/
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+body{
+    font-family:  'Chakra Petch', sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+/*paramatros globales de elementos*/
+
+.text-primary{
+    font-family: var(--FontTitleH5);  /*var(--FontTitleH5);*/
+    font-size: 5rem;
+    color: #a63030;
+    -webkit-text-stroke: 0.5px #612e2e;
+    font-weight: 300;
+}
+.text-second{
+    font-family: var(--FontTitleH3);
+    color: rgb(54,54, 54);
+}
+.text-header{
+    text-align: center;
+    color: white;
+    margin-top: 8rem;
+}
+.text-import{
+    color:#e24040
+}
+.text-precio{
+    font-family: var(--FontTitleH3);
+    color:#612e2e ;
+    font-size: 3rem;
+}
+.text-valor{
+    font-family: var(--FontTitleH3);
+    color:#90eebf;
+    font-size: 3rem;
+}
+.footer{
+    background-color: black;
+    padding: 1.5rem 0;
+}
+
+img{
+    width: 100%;
+}
+.imgblog{
+    width: 35rem;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+h3{
+    font-size: 3rem;
+}
+p{
+    font-size: 1.4rem;
+}
+.contenedor{
+    width: min(95%,120rem);
+    margin: 0 auto;
+}
+.main-grid{
+    display: grid;
+    grid-template-columns: 1fr 20%;
+    gap: 3rem;
+}
+.nomargin{
+    margin: 0 ;
+}
+.nopadding{
+    padding: 0;
+}
+
+.header{
+    background-image: url(../image/kratos-header.jpg);
+    height: 35rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.barra{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navegacion{
+    display: flex;
+    gap: 1.5rem;
+}
+.btn-link{
+    display: inline-block;
+    background-color: #612e2e;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+.btn-second{
+    background-color: #e24040;
+    color: #612e2e;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    margin: 2rem 0 2rem 0;
+    text-align: center;
+}
+li{
+    list-style: none;
+}
