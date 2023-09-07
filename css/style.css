@@ -13,7 +13,7 @@ html{
 *,*::after,*::before{
     box-sizing: inherit;
 }
-body{
+.body-orign{
     font-family:  'Chakra Petch', sans-serif;
     font-size: 1.8rem;
     line-height: 1.5;
@@ -21,7 +21,7 @@ body{
 
 /*paramatros globales de elementos*/
 
-.text-primary{
+.text-title{
     font-family: var(--FontTitleH5);  /*var(--FontTitleH5);*/
     font-size: 5rem;
     color: #a63030;
@@ -55,7 +55,7 @@ body{
     padding: 1.5rem 0;
 }
 
-img{
+.img-orign{
     width: 100%;
 }
 .imgblog{
@@ -63,16 +63,22 @@ img{
     aspect-ratio: 16/9;
     object-fit: contain;
 }
-a{
+.icons{
+    width: 2rem;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.a-orign{
     text-decoration: none;
     cursor: pointer;
     color: white;
 }
 
-h3{
+.h3-orign{
     font-size: 3rem;
 }
-p{
+.p-orign{
     font-size: 1.4rem;
 }
 .contenedor{
@@ -108,7 +114,7 @@ p{
     display: flex;
     gap: 1.5rem;
 }
-.btn-link{
+.btn-primary{
     display: inline-block;
     background-color: #612e2e;
     color: white;
@@ -116,6 +122,10 @@ p{
     padding: 0.5rem 1rem;
     margin-top: 2rem;
     text-align: center;
+}
+.btn-primary:hover{
+background-color: #e24040;
+color: #612e2e;
 }
 .btn-second{
     background-color: #e24040;
@@ -125,6 +135,53 @@ p{
     margin: 2rem 0 2rem 0;
     text-align: center;
 }
-li{
+.btn-second:hover{
+    background-color: #90eebf;
+    color: black;
+}
+
+.btn-main:hover{
+    font-size: 125%;
+}
+.li-orign{
     list-style: none;
+}
+
+.GridTemplate{
+    display: grid;
+    grid-template-areas: 
+    "Header"
+    "Main"
+    "Footer";
+    grid-template-rows: 35rem 1fr 1fr;
+    grid-gap: 10px;
+    height: 100vh;
+    margin: 0px;
+}
+#headergrid{
+    grid-area: Header;
+}
+#maingrid{
+    grid-area: Main;
+}
+#footergrid{
+    grid-area: Footer;
+}
+
+
+
+
+/*animaciones*/
+@keyframes color-change{
+    0%{color: #612e2e;}
+    25%{color: #a63030;}
+    50%{color: #e24040;}
+    75%{color: #a63030;}
+    100%{color: #612e2e;}
+}
+#anim-color:hover{
+    cursor: pointer;
+    animation-name: color-change;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
 }

@@ -21,10 +21,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:wght@300&family=Kanit:ital,wght@1,200&display=swap" rel="stylesheet">
 
-    <title>Steam LATAM</title>
+    <title>Contacto</title>
 </head>
-<body  class="body-orign">
-    <header class="header">
+<body class="GridTemplate body-orign">
+    <header class="header" id="headergrid">
         <div class="contenedor">
             <div class="barra">
                 <a  href="../html/index.html" class="a-orign" ><h1 class="text-title nomargin nopadding">Steam LATAM</h1></a>
@@ -35,80 +35,32 @@
                     <a  href="../html/contacto.html"class="a-orign nomargin nopadding text-second"><span class="btn-main" id="anim-color">contacto</span></a>
                 </nav>
             </div>
-            <div class="text-header">
-                <h3 class="h3-orign nomargin nopadding text-import">Aventurate a descubri nuevos mundos</h3>
-                <p class="p-orign nomargin">Dedicada a la saga God of War de PlayStation Studios.</p>
-                <a href="../html/productos.html" class="a-orign"><button type="button" class="btn btn-outline-light border-0 fs-2">Explorar</button></a>
-            </div>
         </div>
-        
     </header>
-    <main class="contenedor main-grid">
-        <section class="blog">
-            <h1>Juegos de Aventura</h1> 
-            <article>
-                <img class="img-orign imgblog" src="../image/games/godofwar1.jpg" alt="">
-                <div>
-                    <h3 class="h3-orign nomargin nopadding" >God of War</h3>
-                    <p class="p-orign nomargin nopadding">
-                        kratos asiende al trono del dios de la guerra pero tendra
-                         que derrotar a ares y enfrentar su pasado
-                    </p>
-                    <a class="a-orign btn-primary" href="">Comprar</a>
-                </div>
-                <hr>
-            </article>
-            <article>
-                <img class="img-orign imgblog" src="../image/games/godofwar2.jpg" alt="">
-                <div>
-                    <h3 class="h3-orign nomargin nopadding" >God of War 2</h3>
-                    <p class="p-orign nomargin nopadding">
-                        El Dios de la Guerra tendra que defender su titulo
-                         enfrentara a Zeus y a las hermanas del tiempo para 
-                         cambiar su destino
-                    </p>
-                    <a class="a-orign btn-primary" href="">Comprar</a>
-                </div>
-                <hr>
-            </article>
-            <article>
-                <img class="img-orign imgblog" src="../image/games/godofwar3.jpg" alt="">
-                <div>
-                    <h3 class="h3-orign nomargin nopadding" >God of War 3</h3>
-                    <p class="p-orign nomargin nopadding">
-                        Finalmente El fantasma de Esparta enfrentara a todo el Olimpo
-                        su lucha contra los dioses lo llevara a conocer
-                        cosas sobre su familia
-                    </p>
-                    <a class="a-orign btn-primary" href="">Comprar</a>
-                </div>
-            </article>
-            <span class="m-3"></span>
-        </section>
-         <aside><!--seccion del costado del main (filtro u otros)-->
-            <h1>DLS EXTRAS</h1>
-            <li class="li-orign" >
-                <h2>Merluzo de la guerra</h2>
-                <p class="p-orign " >Cuando se utiliza, Kratos se muestra vistiendo un traje de pescado azul,
-                     y sus Espadas de Atenea se sustituyen con un par de anzuelos.</p>
-                <p class="p-orign text-valor nomargin"><span class="text-precio nomargin">PRECIO: </span> $200</p>
-                <a class="a-orign btn-second" href="">COMPRAR</a>
 
-            </li>
-            <hr>
-            <li  class="li-orign" >
-                <h2>Armadura de Hidra</h2>
-                <p class="p-orign ">El uso de este traje duplica la armadura de Kratos y el valor de los orbes verdes, orbes azules, y orbes de oro que él recoge.
-                     Sin embargo, este traje también reduce la fuerza global de Kratos a la mitad.</p>
-                <p class="p-orign text-valor nomargin"><span class="text-precio nomargin">PRECIO: </span> $550</p>
-                <a class="a-orign btn-second" href="">COMPRAR</a>
-
-            </li>
-        </aside>    
+    <main id="maingrid">
+        <h3 class="h3-orign text-center">Formulario</h3>
+        <div class="container-fluid w-25 p-3 border border-3 rounded-3 border-black fs-6">
+            <!--contenedor-chico with-25 paddin-3 borde -borde-3 radius-3 borde-black-->
+                <form  action="">
+                    <div class="form-floating">
+                        <input class="form-control" type="text" name="name" id="name" placeholder="">
+                        <label for="name" class="form-label">Nombre</label>
+                    </div>
+                    <div class="mt-3 form-floating">
+                        <input class="form-control" type="email" name="email" id="email" placeholder="">
+                        <label for="Email" class="form-label">Email</label>
+                    </div>
+                    <div class="mt-3">
+                        <label class="form-label" for="">Consulta</label>
+                        <textarea class="form-control" placeholder="Escribir" id="" cols="30" rows="5"></textarea>
+                    </div>
+                    <button class="btn btn-primary">Envia</button>
+                </form>
+            </div>
     </main>
-   
 
-    <footer class="footer">
+    <footer class="footer" id="footergrid">
         <div class="contenedor">
             <div class="barra">
                 <a  href="../html/index.html" class="a-orign"><h1>Steam LATAM</h1></a>
@@ -128,6 +80,5 @@
             </div>
         </div>
     </footer>
-    
 </body>
 </html>
