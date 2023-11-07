@@ -3,10 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../js/objeto.js"></script>
+    <!--<script src="../js/DOM.js"></script> asi se llama a un archivo js-->
+    <link rel="stylesheet" href="../CSS/style.css">
     <title>JavaScript</title>
 </head>
 <body>
     <h1> JavaScrpts</h1>
+    <h3 class="subtitulo">esto es un subtitulo</h3>
+    <p id="parrafo"> esto es un parrafo</p>
+    <img src="../img/atreus.jpg" alt="Atreus">
+
+    <hr>
+    <hr>
+    <h1>Adivina el Numero</h1>
+    <p>Debes adivinar un numnero entre 1 y 10</p>
+    <input type="number" id="adivinarNumero">
+    <button onclick="verificarNumero ()">Verificar</button> 
+    <p id="resultado"></p>
+    <hr>
+    <h1>Calculadora</h1>
+    <input type="text" id="viewCalt" value="--">
+    <input type="text" id="result" value="" class="tam">
+    <br>
+    <button onclick="agregarNumero(7)">7</button>
+    <button onclick="agregarNumero(8)">8</button>
+    <button onclick="agregarNumero(9)">9</button>
+    <button onclick="borrarNumero()">C</button>
+    <br>
+    <button onclick="agregarNumero(4)">4</button>
+    <button onclick="agregarNumero(5)">5</button>
+    <button onclick="agregarNumero(6)">6</button>
+    <button onclick="operacion('+')">+</button>
+    <br>
+    <button onclick="agregarNumero(1)">1</button>
+    <button onclick="agregarNumero(2)">2</button>
+    <button onclick="agregarNumero(3)">3</button>
+    <button onclick="operacion('-')">-</button>
+    <br>
+    <button onclick="agregarNumero(0)">0</button>
+    <button onclick="operacion('/')">/</button>
+    <button onclick="operacion('*')">*</button>
+    <button onclick="calcular()">=</button>
+    <!--se coloca al ultimo asi carga primero el HTML-->
+    <script src="../js/DOM.js"> </script>
 </body>
 </html>

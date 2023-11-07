@@ -1,0 +1,21 @@
+.js{
+    background-color: beige;
+    color: chocolate;
+    font-size: medium;
+}
+img{
+    width: 150px;
+    height: 200px;
+}
+.tam{
+ width: 20px;
+ background-color: aquamarine;
+}
+button{
+    width: 20px;
+    height: 20px;
+    color: green;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}

@@ -33,3 +33,10 @@ console.log(test)
 Object.keys(Formulario) //muestra las PROPIEDADES dentro del objeto
 Object.values(Formulario)//muestra los VALORES de cada PROPIEDAD
 Object.entries(Formulario)//muestra un array con arrays dentro que tienen las PROPIEDADDES y sus VALORES
+
+
+function Saludar (){
+    alert("hello")
+}
+
+Saludar()
