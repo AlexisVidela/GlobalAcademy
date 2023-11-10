@@ -1,21 +1,96 @@
-.js{
-    background-color: beige;
-    color: chocolate;
-    font-size: medium;
+
+/*parametros del html y body*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*(1rem= 10px)*/
 }
-img{
-    width: 150px;
-    height: 200px;
+*,*::after,*::before{
+    box-sizing: inherit;
 }
-.tam{
- width: 20px;
- background-color: aquamarine;
-}
-button{
-    width: 20px;
-    height: 20px;
-    color: green;
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-rows: 15%,1fr,5%;
+    margin: 0 auto;
     text-align: center;
-    margin: 0;
-    padding: 0;
+    height: 100vh;
+}
+.divheader{
+    grid-area: header;
+}
+.divmain{
+    grid-area: main;
+    
+}
+.divfooter{
+    grid-area: footer;
+}
+.imgheader{
+    background-image: url(https://image.freepik.com/vector-gratis/supermercado-cliente-plana-vector-banner-plantilla_82574-4049.jpg);
+    height: 35rem;
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+}
+
+.btn-dark-ligth{
+    display: inline-block;
+    background-color: #080808;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.text-header{
+    margin-top: 9rem;
+    padding: 3rem;
+    font-size: 5rem;
+}
+
+.main-grid{
+    display: grid;
+    grid-template-columns: 1fr 50% 5%;
+    gap: 3rem;
+}
+.blog{
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+.bt-main{
+    margin-top: 2rem;
+    height: 3rem;
+    font-size: 1.5rem;
+}
+.txtarea-add{
+    background-color: rgb(136, 135, 135);
+    color: rgb(175, 206, 233);
+    height: 20rem;
+    width: 20rem;
+}
+.txtarea-delete{
+    background-color: rgb(241, 158, 158);
+    color: black;
+    height: 20rem;
+    width: 20rem;
+}
+input{
+    height: 3rem;
+}
+.txt-size{
+    font-size: 1.5rem;
+}
+.totale{
+    background-color: aquamarine;
+    color: black ;
+    width: 5rem;
+}
+
+.btn-darkligth{
+    width: 8rem;
 }
