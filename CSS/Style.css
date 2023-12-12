@@ -19,6 +19,10 @@ body{
     text-align: center;
     height: 100vh;
 }
+.bt-link{
+    text-decoration: none;
+    color: rgb(168, 218, 247);
+}
 .divheader{
     grid-area: header;
 }
@@ -30,8 +34,8 @@ body{
     grid-area: footer;
 }
 .imgheader{
-    background-image: url(https://image.freepik.com/vector-gratis/supermercado-cliente-plana-vector-banner-plantilla_82574-4049.jpg);
-    height: 35rem;
+    background-image: url(https://alexisvidela.github.io/img/frontend-and-backend.png);
+    height: 55rem;
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
@@ -58,6 +62,19 @@ body{
     grid-template-columns: 1fr 50% 5%;
     gap: 3rem;
 }
+.main-grid-2C{
+    display: grid;
+    grid-template-columns: 1fr 35%;
+    gap: 3rem;
+}
+.main-grid-3C{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+}
+
 .blog{
     margin-left: 20rem;
     margin-right: 20rem;
@@ -85,6 +102,9 @@ input{
 .txt-size{
     font-size: 1.5rem;
 }
+.txt-left{
+    text-align: left;
+}
 .totale{
     background-color: aquamarine;
     color: black ;
@@ -93,4 +113,192 @@ input{
 
 .btn-darkligth{
     width: 8rem;
+}
+
+
+/*calculadora*/
+.imgCalculadora{ 
+    background-image: url(https://alexisvidela.github.io/img/calculadora.jpg);
+    height: 55rem;
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+}
+.calculadora{
+    background-color: beige;
+    margin: 15% auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    max-width: 250px;
+}
+.botones{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 5px;
+}
+.pantalla{
+    background-color: rgb(134, 228, 228);
+    margin-bottom: 10px ;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    text-align: left;
+    padding: 5px;
+    font-size: larger;
+    width: 182px;
+    
+}
+.pantallaResult{
+    background-color: rgb(65, 66, 66);
+    color: aliceblue;
+    margin-bottom: 10px ;
+    margin-left: 3px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    font-size: larger;
+    width: 40px;
+}
+.cal-button{
+    background-color: darkgray;
+}
+.cal-button-delete{
+    background-color: red;
+    color: aliceblue;
+}
+.button{
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    border: 0.02rem solid black;
+}
+.button-main{
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+    background-color: rgb(88, 88, 88);
+    width: 20rem;
+}
+.cal-button:hover{
+    background-color: white;
+}
+.cal-button-delete:hover{
+    background-color: white;
+    color: red;
+}
+
+/*administrador de tareas*/
+.nuevatarea{
+    width: 35rem;
+    background-color: rgb(255, 255, 255);
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+}
+    /*articulo formato*/
+.tarea{
+    display: grid;
+    grid-template-columns: 1fr 7% 7%;
+    grid-gap: 5px;
+}
+.imgdeletetarea{
+    background-color: transparent;
+    border: 0;
+    background-image: url(https://alexisvidela.github.io/img/check_false.jpg);
+    height: 2.4rem;
+    width: 2.4rem;
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+.imgtareacheck{
+    background-color: transparent;
+    border: 0;
+    background-image: url(https://alexisvidela.github.io/img/check_true.jpg);
+    height: 2.4rem;
+    width: 2.4rem;
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+.imgdeletetarea:hover{
+    opacity: 0.5;
+}
+.imgtareacheck:hover{
+    opacity: 0.5;
+}
+.tareacheck{
+    background-color: rgb(2, 172, 2);
+}
+.flextareas{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(224, 224, 224);
+    align-items: center;
+    justify-content:space-around;
+}
+.text-header{
+    text-align: center;
+    color: rgb(1, 77, 107);
+    margin-top: 8rem;
+    
+}
+.fdp{
+    background-image: url(https://alexisvidela.github.io/img/agenda.jpg);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    image-resolution: 16/9;
+}
+
+/*sistema de stock*/
+.imgheader-Ss{
+    background-image: url(https://alexisvidela.github.io/img/graficos.jpg);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    image-resolution: 16/9;
+}
+.color1{
+    color:lightslategrey;
+    -webkit-text-stroke: 0.05rem white;
+}
+.color2{
+    color:azure;
+}
+
+/*pronostico*/
+.cont{
+   border: 0.1rem solid orange;
+   border-radius: 0.5rem;
+   height: 10rem;
+   width: 30rem;
+   font-size: 1.3rem;
+   background-color: rgb(255, 228, 177);
+   text-align: left;
+   padding-left: 0.5rem;
+   margin-bottom: 0rem;
+}
+.timetitle{
+    font-size: 3rem;
+    color: orange;
+    
+}
+.p-text{
+    margin-bottom: 0px;
+}
+.img-clima{
+    background-image: url(https://th.bing.com/th/id/R.505672f2bd5dbf0b1d5e9f78d2090838?rik=Si2dUcbSDuNKBA&riu=http%3a%2f%2fwallpapercave.com%2fwp%2f7rhrsIf.jpg&ehk=qFtPjAA2O7HVhvjoB%2bVQ9x0xuRAdDKiPu0vOv7gYaBo%3d&risl=&pid=ImgRaw&r=0);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    image-resolution: 16/9;
+}
+.color-clima{
+    background-color: rgb(177, 175, 175);
 }

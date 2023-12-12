@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://alexisvidela.github.io/CSS/style.css">
-    <!--Boostrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
-    <title>Mis Proyectos</title>
+
+    <title>Administrador de Tareas</title>
 </head>
-<body style="background-color: darkgrey;">
-    <header class="header imgheader">
+<body>
+    <header class="divheader fdp">
+        <h1 class=" text-header">Controla tus tareas pendientes</h1>
     </header>
-    <main id="main" >
+    <main class="divmain text-center">
+        <div class="bg-primary-subtle pt-2 pb-2">
+            <span>TITULO DE LA TAREA</span>
+            <input id="nametarea" type="text">
+            <span>DESCRIPCION (opcional)</span>
+            <input class="m-2" id="description" type="text">
+            <button class="btn btn-primary "  onclick="Agregar_Tarea()" >agregar tarea</button>
+            <button class="btn btn-secondary" onclick="Limpiar()" >Limpiar listado</button>
+        </div>
+        <ol class="flextareas" id="lista">
+        </ol>
     </main>
-    <!--se coloca al ultimo asi carga primero el HTML-->
-    <script src="https://alexisvidela.github.io/js/javascript.js"> </script>
+
+    <script src="https://alexisvidela.github.io/js/tareas.js"> </script>
 </body>
 </html>
