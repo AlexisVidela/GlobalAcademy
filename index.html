@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/Style.css">
     <!--Boostrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
@@ -12,46 +12,34 @@
     <title>Shopping List</title>
 </head>
 <body>
-    <header class=" imgheader bg-black">
+    <header class="divheader imgheader bg-black">
             <h1 class="text-center text-header">SHOPPING LIST</h1>
             <h3 class="text-center ">Put together your grocery list, here you can</h3>
     </header>
-    <main class="divmain blog">
-        <section class="main-grid">
+    <main  class="divmain main-grid-3C">
+        <section >
             <article>
-                <h1 class="mt-4">Name Product</h1>
-                <input class="txt-size" type="text" name="" id="nameID" >
+                <h1 class="">Name Product</h1>
+                <input class="txt-size inputprod" type="text" name="" id="nameID" >
                 <h1>Price Product</h1>
-                <input class="txt-size" type="number" id="priceID">
+                <input class="txt-size inputprod" type="text" id="priceID">
                 <br>
-                <button class="bt-main" onclick="add_product()" >Add Product</button>
-                <button class="bt-main" onclick="new_list()" >New List</button>
-            </article>
-            <article>
-                <textarea class="txtarea-add mt-4 txt-size" name="" id="listID" cols="30" rows="10" disabled>
-                </textarea>
-                <br>
-                <input class="totale" type="text" id="totaleID" value="$0">
-            </article>
-            <article>
-                <button class="btn btn-secondary mt-1 p-0 btn-darkligth" onclick="modeDark()" id="buttonID" ><span id="buttontxtID">Dark Mode</span></button>
+                <button class="bt-main bt-main2" onclick="html_Js()" >Add Product</button>
+                <button class="bt-main bt-main2" onclick="new_list()" >New List</button>
             </article>
         </section>
-            <hr>
-        <section  class="main-grid">
-            <article>
-                <h1>Name Product</h1>
-                <input class="txt-size" type="text" name="" id="namedeleteID">
-                <br>
-                <button class="bt-main" onclick="delete_product()">Delete Product</button>
-            </article>
-            <article>
-                <textarea class="txtarea-delete txt-size" name="" id="listDeleteID" cols="30" rows="10" disabled></textarea>
-            </article>
+        <section>
+            <ol id="lista" ></ol>
+        </section>
+        <section>
+            <button class="btn btn-secondary mt-1 p-2 btn-info" onclick="retrieveProd()" >Retrieve list</button>
+            <button class="btn btn-secondary mt-1 p-2 btn-darkligth" onclick="modeDark()" id="buttonID" >
+                <span id="buttontxtID">Dark Mode</span>
+            </button>
+            <br>
+            <input  type="text" id="totale" disabled placeholder="TOTALE">
         </section>
     </main>
-
-
     <!--se coloca al ultimo asi carga primero el HTML-->
     <script src="../js/javascript.js"> </script>
 </body>

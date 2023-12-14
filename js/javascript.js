@@ -1,18 +1,121 @@
 
-const listShop = []
-const listNouShop = []
-let darkWeb=0
+const list = document.getElementById("lista")
 const body= document.querySelector('body')
-const txtheader = document.querySelector('header')
+const header = document.querySelector('header')
 const button = document.getElementById('buttonID')
+const listShop=[]
+let id = 0
+let darkWeb=0
+let total=0
+
+/*PASA LOS DATOS DEL INPUT A VARIABLES */
+function html_Js(){
+    const nameHtml= document.getElementById("nameID").value
+    const priceHtml = document.getElementById("priceID").value
+    if (validation(nameHtml,priceHtml)===0){
+    add_product(nameHtml,priceHtml)
+    document.getElementById("nameID").value=""
+    document.getElementById("priceID").value=""
+    }
+}
+/*VALIDA QUE LOS DATOS SEA CORRECTOS */
+function validation(input1,input2){
+    if (input1===""){ 
+        alert("Please enter a valid name product")
+        return
+    }
+    if (input2===""){
+         alert("Please enter a valid price")
+         return
+    }
+    if (isNaN(input2)){
+        alert("The price has to be a number")
+        return
+    }
+    return 0
+}
 
 
-//cambia el aspecto de la web
+/*GENERE CONTENIDO EN EL HTML CON LA INF RECIBIDA */
+function add_product(nameProd,priceProd){
+
+    const article = document.createElement("article")
+    const span = document.createElement("span")
+    const h1 =document.createElement("h1")
+    const parf = document.createElement("span")
+    const buttonCheck = document.createElement("button")
+    const buttonDelete = document.createElement("button")
+    const span2 = document.createElement("span")
+    span2.textContent="$"
+    
+    h1.textContent = nameProd
+    h1.setAttribute("class","m-0 p-0")
+    parf.textContent = priceProd
+    parf.setAttribute("class","m-0 p-0")
+    
+    span.appendChild(h1)
+    span.appendChild(span2)
+    span.appendChild(parf)
+    buttonCheck.setAttribute("class","imgprodcheck")
+    buttonCheck.setAttribute("id","button"+id)
+    buttonCheck.setAttribute("onclick","Check_prod('A',"+id+")")
+
+    buttonDelete.setAttribute("class","imgdeleteprod")
+    buttonDelete.setAttribute("id","button"+id)
+    buttonDelete.setAttribute("onclick","Delete_prod('A',"+id+")")
+    
+
+    article.setAttribute("class","nuevoprod prod txt-left p-2 m-3")
+    article.setAttribute("id","A"+id)
+    article.appendChild(span)
+    article.appendChild(buttonCheck)
+    article.appendChild(buttonDelete)
+
+    list.appendChild(article)
+    id++
+    skinnProd()
+    
+}
+/*ALMACENA LOS VALORES INDEPENDIENTES EN UN OBJETO Y LOS PONE EN UN ARREGLO*/
+function produc_a_object(string,num){
+    const product = {
+        namep : "",
+        pricep : ""
+    }
+    product.namep = string
+    product.pricep= num
+    listShop.push(product)
+}
+/*ELIMINA EL PRODUCTO SELECCIONADO*/
+function Delete_prod(Char,idprod){
+ const idArticle = document.getElementById(Char+idprod)
+ idArticle.remove()
+}
+/*CONFIRMA EL PRODUCTO SELECIONADO */
+function Check_prod(Char,idprod){
+    const idArticle = document.getElementById(Char+idprod)
+    idArticle.style=null
+    idArticle.classList.remove("nuevoprod")
+    idArticle.classList.toggle("prodcheck")
+    priceTotale(Char+idprod)
+    saveProd(Char+idprod)
+    for (let i=0;i<2;i++){
+        const button  = document.getElementById("button"+idprod)
+        button.remove()
+    }
+}
+/* LIMPIA LA LISTA EN EL HTML*/
+function new_list(){
+    list.innerHTML=""
+    updateTotale(false,0)
+}
+/*CAMBIA EL DISEÑO DE LA WEB A MODO OSCURO */
 function modeDark(){
     if (darkWeb ==0){
         body.style.color = "white"
         body.style.backgroundColor = "dimgrey"
-        txtheader.style.color="dimgrey"
+        header.style.color="dimgrey"
+        header.setAttribute("class","imgheaderdarck bg-black")
         button.innerHTML="Ligth Mode"
         button.classList.remove('btn-secondary')
         button.classList.add('btn-primary')
@@ -20,120 +123,64 @@ function modeDark(){
     }else{
         body.style.color = "black"
         body.style.backgroundColor = "white"
-        txtheader.style.color="black"
+        header.style.color="black"
+        header.setAttribute("class","imgheader bg-black")
         button.innerHTML="Dark Mode"
         button.classList.remove('btn-primary')
         button.classList.add('btn-secondary')
         darkWeb=0
     }
+    skinnProd()
 }
-
-
-//funcion para comparar 2 cadenas
-function compare(string1, string2) {
-    if (string1 < string2) {
-      return -1;
-    } else if (string1 > string2) {
-      return 1;
-    } else {
-      return 0;
+/* ACTULIZA EL STILO DE LOS PRODUCTOS DEPENDIENDO EN EL MODO QUE SE ENCUENTRE*/
+function skinnProd(){
+    const Art = document.querySelectorAll('.nuevoprod')
+    if (darkWeb ==1){
+        for (var i = 0; i < Art.length; i++) {
+            Art[i].style.backgroundColor = "rgb(68, 68, 68)"
+            }
+    }else{
+        for (var i = 0; i < Art.length; i++) {
+            Art[i].style.backgroundColor = "rgb(208, 208, 208)"
+            }
     }
 }
-
-function add_product(){
-    //variables
-    const nameProduct = document.getElementById('nameID');
-    const priceProduct = document.getElementById('priceID')
-    const list = document.getElementById('listID')
-    const product = {
-        namep : "",
-        pricep : ""
-    }
-    //guarda la informacion recibida en un objeto
-    product.namep = nameProduct.value
-    product.pricep= priceProduct.value
-    //agrega un producto
-    listShop.push(product)
+/* SUMA EL VALOR DEL PRODUCTO CHEQUEADO AL TOTAL*/
+function priceTotale(idprod) {
+    const price = Number(document.querySelectorAll('#'+idprod+' > span > span')[1].textContent);
+    updateTotale(true,price)
     
-    //actualiza la lista de compras
-    list.innerHTML= null
-    for (let ii =0;ii<listShop.length;ii++){
-        list.innerHTML += listShop[ii].namep+" $"+listShop[ii].pricep+"\n"
-    }
-
-    //limpia los campos de 'agregar un producto'
-    document.getElementById('nameID').value=""
-    document.getElementById('priceID').value=""
-    sumar_total()
-
 }
+/* OBTIENE LOS VALORES DEL PRODUCTO (NOMBRE Y PRECIO)*/
+function saveProd(prod){
+ const tagprod = document.querySelectorAll('#'+prod+' > span > h1')[0].textContent
+ const valueprod = Number(document.querySelectorAll('#'+prod+' > span > span')[1].textContent);
+ produc_a_object(tagprod,valueprod)
+}
+/* AGREGA AL HTML LOS PRODUCTOS GUARDADOS EN EL ARREGLO*/
+function retrieveProd(){
 
-
-function delete_product(){
-    ///variables
-    const nameProductDelete =  document.getElementById('namedeleteID');
-    const listDelete = document.getElementById('listDeleteID')
-    const list = document.getElementById('listID')
-    const productDelete = {
-        nameDeletep : "",
-        priceDeletep : ""
+    for(let i=0;i<listShop.length;i++){
+        add_product(listShop[i].namep,listShop[i].pricep)
     }
-
-    for (let ii =0;ii<listShop.length;ii++){//recorre el arreglo de lista de compras
-        
-        //comprara las cadenas para identificar cual quiere borrar
-        if (compare(nameProductDelete.value,listShop[ii].namep)===0) {
-            
-            //guarda el producto eliminado en un objeto
-            productDelete.nameDeletep = listShop[ii].namep
-            productDelete.priceDeletep= listShop[ii].pricep    
-            //elimina el producto de la listad de compra
-            listShop.splice(ii,1)
-            //actualiza lista compra        
-            list.innerHTML= null
-            for (let jj =0;jj<listShop.length;jj++){
-                list.innerHTML += listShop[jj].namep+" $"+listShop[jj].pricep+"\n"
-            }
-            //agrega el elemento borrado a la lista de eliminados
-            listNouShop.push(productDelete)
-            //actualiza la lista de eliminados
-            listDelete.innerHTML= null
-            for (let ii =0;ii<listNouShop.length;ii++){
-                listDelete.innerHTML += listNouShop[ii].nameDeletep+" $"+listNouShop[ii].priceDeletep+"\n"
-            }
-            break;
+    listShop.splice(0,listShop.length)
+    deleteProdCheck()
+    updateTotale(false,0)
+}
+/* ELIMINA AQUELLOS PRODUCTO QUE ESTEN CONFIRMADOS*/
+function deleteProdCheck(){
+    const Art = document.querySelectorAll('.prodcheck')
+    for (var i = 0; i < Art.length; i++) {
+        Art[i].remove()
         }
-    }
-
-    //limpia el campo de 'borrar un producto'
-    document.getElementById('namedeleteID').value=""
-    sumar_total()
 }
-
-//limpia las listas y los textarea
-function new_list(){
-
-    const listDelete = document.getElementById('listDeleteID')
-    const list = document.getElementById('listID')
-
-    list.innerHTML= null
-    listDelete.innerHTML= null
-    //limpia el arreglo de compras
-    while(listShop.length!=0){
-    listShop.pop()
+/*ACTUALIZA EL VALOR DEL TOTAL */
+function updateTotale(bool,num){
+    if (bool==true){
+    total +=num
+    document.getElementById("totale").value="$"+total
+    }else{
+        total=0
+        document.getElementById("totale").value="TOTALE"
     }
-    //limpia el arreglo de productos eliminados
-    while(listNouShop.length!=0){
-        listNouShop.pop()
-    }
-    sumar_total()
-}
-
-//suma el total de los precios de los productos
-function sumar_total(){
-    let total=0
-    for (let jj =0;jj<listShop.length;jj++){
-        total += Number(listShop[jj].pricep)
-    }
-    document.getElementById('totaleID').value=" $"+total
 }

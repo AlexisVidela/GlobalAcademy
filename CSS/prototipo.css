@@ -1,7 +1,7 @@
-
+/*parametros del html y body*/
 html{
     box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 62.5%; /*(1rem= 10px)*/
 }
 *,*::after,*::before{
     box-sizing: inherit;
@@ -13,7 +13,7 @@ body{
     "header"
     "main"
     "footer";
-    grid-template-rows: 35rem 1fr 5%;
+    grid-template-rows: 15%,1fr,5%;
     margin: 0 auto;
     text-align: center;
     height: 100vh;
@@ -24,18 +24,8 @@ body{
 .divmain{
     grid-area: main;  
 }
-.divfooter{
-    grid-area: footer;
-}
 .imgheader{
-    background-image: url(../img/Super.jpg);
-    height: 35rem;
-    background-size:cover;
-    background-position:center center;
-    background-repeat: no-repeat;
-}
-.imgheaderdarck{
-    background-image: url(../img/SuperDarck.jpg);
+    background-image: url(https://image.freepik.com/vector-gratis/supermercado-cliente-plana-vector-banner-plantilla_82574-4049.jpg);
     height: 35rem;
     background-size:cover;
     background-position:center center;
@@ -50,13 +40,25 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     justify-items: center;
-    align-items:start;
+    align-items: center;
     gap: 1rem;
 }
 main{
     margin-top: 2rem;
     height: 3rem;
     font-size: 1.5rem;
+}
+.txtprod-add{
+    background-color: rgb(136, 135, 135);
+    color: rgb(175, 206, 233);
+    height: 20rem;
+    width: 20rem;
+}
+.txtprod-delete{
+    background-color: rgb(241, 158, 158);
+    color: black;
+    height: 20rem;
+    width: 20rem;
 }
 input{
     height: 3rem;
@@ -72,19 +74,20 @@ input{
     color: black ;
     width: 5rem;
 }
-.nuevoprod{
+.nuevoprod{/*se usa*/
     width: 35rem;
-    background-color: rgb(208, 208, 208);
+    background-color: rgb(255, 255, 255);
     border: 0.1rem solid black;
     border-radius: 0.5rem;
 }
-.prod{
+.prod{/*se usa*/
     display: grid;
     grid-template-columns: 1fr 7% 7%;
     grid-gap: 5px;
 }
-.imgdeleteprod{
+.imgdeleteprod{/*se usa*/
     background-color: transparent;
+    border: 0;
     background-image: url(../img/check_false.jpg);
     height: 2.4rem;
     width: 2.4rem;
@@ -92,11 +95,10 @@ input{
     background-position:center center;
     background-repeat: no-repeat;
     margin: auto;
-    border-radius: 4rem;
-    border: 0.1px solid black
 }
-.imgprodcheck{
+.imgprodcheck{/*se usa*/
 background-color: transparent;
+border: 0;
 background-image: url(../img/check_true.jpg);
 height: 2.4rem;
 width: 2.4rem;
@@ -104,34 +106,29 @@ background-size:cover;
 background-position:center center;
 background-repeat: no-repeat;
 margin: auto;
-border-radius: 4rem;
-border: 0.1px solid black;
 }
-.imgdeleteprod:hover{
+.imgdeleteprod:hover{/*se usa*/
 opacity: 0.5;
 }
-.imgprodcheck:hover{
-    opacity: 0.5;
+.imgtprodcheck:hover{/*se usa*/
+opacity: 0.5;
 }
-.prodcheck{
-    background-color: rgb(2, 172, 2);
-    width: 35rem;
-    border: 0.1rem solid black;
-    border-radius: 0.5rem;
+.prodcheck{/*se usa*/
+background-color: rgb(2, 172, 2);
 }
-.flexprod{
+.flexprod{/*se usa*/
 display: flex;
 flex-direction: column;
 background-color: rgb(224, 224, 224);
 align-items: center;
 justify-content:space-around;
 }
-.bt-main{
+.bt-main{/*se usa*/
     margin-top: 2rem;
     height: 3rem;
     font-size: 1.5rem;
 }
-.btn-dark-ligth{
+.btn-dark-ligth{/*se usa*/
     display: inline-block;
     background-color: #080808;
     color: white;
@@ -139,34 +136,4 @@ justify-content:space-around;
     padding: 0.5rem 1rem;
     margin-top: 2rem;
     text-align: center;
-}
-.boxtotale{
-    border: 1px solid black;
-    background-color: aquamarine;
-    height: 2rem;
-    width: 6rem;
-    color: chartreuse;
-}
-#totale{
-    margin-top: 4rem;
-    background-color:rgb(123, 247, 154);
-    border: 1px solid black;
-    border-radius: 0.5rem ;
-}
-.inputprod{
-    border-radius: 0.5rem;
-    background-color: aquamarine;
-    
-}
-.bt-main2{
-    border: none;
-    border-radius: 0.3rem;
-    background-color:aquamarine;
-    color: black;
-    margin: 1rem 0.5rem 0.5rem 0.5rem;
-}
-.bt-main2:hover{
-    transform: scale(1.2);
-    color:aquamarine;
-    background-color: black;
 }
