@@ -1,0 +1,217 @@
+:root {
+    --ColorPrimary: rgb(165, 211, 198);
+    --ColorSecundary: rgb(129, 168, 157);
+    --ColorPrimaryMO: rgb(87, 87, 87);
+    --ColorSecundaryMO: rgb(51, 51, 51);
+    --BoxShadow: rgba(165, 211, 198, 0.651);
+    --FontTitle:'Kanit', sans-serif;
+    --FontPar: 'Bebas Neue', sans-serif;
+    --Fonttxt: 'Slabo 27px',sans-serif;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*(1rem= 10px)*/
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--FontPar);
+    font-size: larger;
+}
+.GridTemplate{
+    display: grid;
+    grid-template-areas: 
+    "Header"
+    "Main"
+    "Footer";
+    grid-template-rows: 7rem 1fr 4rem;
+    grid-gap: 10px;
+    height: 100vh;
+    margin: 0px;
+}
+#headergrid{
+    grid-area: Header;
+}
+#maingrid{
+    grid-area: Main;
+}
+#footergrid{
+    grid-area: Footer;
+}
+.navegacion{
+    display: flex;
+    gap: 1.5rem;
+    
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.main-link{
+    color: white;
+    font-size: 2rem;
+}
+.txt-import{
+    font-weight: bold;
+    font-size: 110%;
+    color: black;
+}
+.header{
+    background-color: var(--ColorSecundary);
+    height: 7rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow:0rem 1rem 2rem 0.1rem var(--BoxShadow) ;
+
+    position:fixed;
+    z-index: 100;
+
+}
+.contenedor{
+    width: min(95%,120rem);
+    margin: 0 auto;
+    padding: 2rem;
+}
+.barra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5rem;
+}
+.title-inf{
+    width: 90rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;
+    
+}
+b{
+    font-size: 1.3rem;
+}
+.subtitle{
+    font-size: 5rem;
+    font-family: var(--FontPar);
+}
+.parf{
+    width: 90rem;
+    font-family:var(--FontTitle);
+    font-size: 1.5rem;
+    
+}
+.alig-cent{
+    align-items: center;
+    flex-direction: column;
+}
+.alig-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+}
+.txt-left{
+    text-align: left;
+}
+.box75{
+    width: 75%;
+}
+.box50{
+    width: 50%;
+}
+.box25{
+    width: 25%;
+}
+.m-0{
+    margin: 0;
+}
+.m-3{
+    margin: 3rem;
+}
+.mt-4{
+    margin-top: 4rem;
+}
+.m-5{
+    margin: 5rem;
+}
+.p-0{
+    padding: 0;
+}
+.p-3{
+    padding: 3rem;
+}
+.p-5{
+    padding: 5rem;
+}
+.bt{
+    border-radius: 1rem;
+    border: 0;
+    width: 6rem;
+    height: 2rem;
+}
+.img-icon{
+    width: 6rem;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+.footer{
+    background-color: var(--ColorPrimary);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow:0rem -1rem 2rem 0.1rem var(--BoxShadow) ;
+    
+}
+.img-redes{
+    width: 2.5rem;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    border-radius: 4rem;
+}
+.img-redes:hover{
+    scale: 125%;
+}
+.link:hover{
+    color: cornflowerblue;
+}
+.next{
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+}
+.next-block{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+}
+
+
+@keyframes fondo{
+    0%{color: white;}
+    25%{color: gray;}
+    50%{color:dimgray;}
+    75%{color: gray;}
+    100%{color: white;}
+}
+#anim-fondo:hover{
+    cursor: pointer;
+    animation-name: fondo;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;/*se repite de manera infinita*/
+}
+
+@keyframes arrow{
+    25%{transform: rotate(30deg);}
+    75%{transform: rotate(-30deg);}
+}
+#anim-arrow:hover{
+    cursor: pointer;
+    animation-name: arrow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
