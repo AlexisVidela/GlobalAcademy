@@ -1,4 +1,4 @@
-let id = 0;
+let id = 3;
 carrusel(true);
 function carrusel(num){
     const txtbox = document.getElementById('txtbox');
@@ -18,7 +18,7 @@ function carrusel(num){
         box.style.backgroundSize = "cover";
         box.style.backgroundPosition = "center center";
         txtbox.textContent="Agenda de tareas";
-        txtinf.textContent="aplicación donde podrás crear una tarea i marcarla como concluida o eliminarla";
+        txtinf.textContent="aplicación donde podrás crear una tarea y marcarla como concluida o eliminarla";
         return;
     }
     if (id==1){

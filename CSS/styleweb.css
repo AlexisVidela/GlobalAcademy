@@ -115,6 +115,9 @@ b{
     gap: 1rem;
     
 }
+.c-blk{
+    color: black;
+}
 .txt-left{
     text-align: left;
 }
