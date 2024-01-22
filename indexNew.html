@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:wght@300&family=Kanit:ital,wght@1,200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+    <!--icons-->
+    <script src="https://kit.fontawesome.com/d92e3390d7.js" crossorigin="anonymous"></script>
     <title>Alexis Videla</title>
 </head>
 <body class="GridTemplate">
@@ -17,7 +19,7 @@
                 <nav class="navegacion">
                     <a class="main-link" id="anim-fondo" href="../indexNew.html">Inicio</a>
                     <a class="main-link" id="anim-fondo" href="#AcerdaDeMi">Acerca de</a>
-                    <a class="main-link" id="anim-fondo" href="../html/Proyecto.html">Proyectos</a>
+                    <a class="main-link" id="anim-fondo" href="#Proyectos">Proyectos</a>
                     <a class="main-link" id="anim-fondo" href="../html/Contacto.html">Contacto</a>
                 </nav>
         </div>    
@@ -39,15 +41,15 @@
         </section>
         <hr>
         <div class="next-block">
-            <div id="anim-arrow" class="next" >
+            <div id="anim-arrow">
                 <a href="#AcerdaDeMi" >
-                    <img class="next" src="../img/arrow.png" alt="">
+                    <i class="fa-solid fa-circle-chevron-down fa-2x" style="color: cornflowerblue;"></i>
                 </a>
             </div>
         </div>
         <section class="p-5 mt-4" id="AcerdaDeMi">
             <div class="alig-cent m-5">
-                <h1 class="subtitle">Acerca de</h1>
+                <h1 class="subtitle ">Acerca de</h1>
                 <div class="m-5">
                     <p class="parf box50 m-5 txt-left">
                         Me llamo Alexis Videla tengo 27 años y actualmente resido en Rio Cuarto,Córdoba.
@@ -69,25 +71,30 @@
         </section>
         <hr>
         <span class="m-5"></span>
-        <section class="mt-4">
-            <div class="alig-cent p-5 m-5">
+        <section class="mt-4" id="Proyectos">
+            <div class="alig-cent p-5 m-5 ">
                 <h1 class="subtitle">Proyectos</h1>
-                <div class="m-5">
-                    <p class="parf box50 m-5 txt-left">
-
-                    </p>
-                </div>
+                    <div class="next-block">
+                        <h1 class="txt-slider" id="txtbox"></h1>
+                        <div class="m-5 display-slider"id="box-slider">
+                            <span class="img-redes" id="prevgrid" ><i class="fa-solid fa-square-caret-left fa-3x" style="color:  rgb(73, 72, 72);" onclick="carrusel(false)"></i></span>
+                            <span class="img-redes"><i class="fa-solid fa-circle-play fa-4x" style="color: rgb(73, 72, 72);" onclick="viewweb()" ></i></span>
+                            <span class="img-redes" id="nextgrid"><i class="fa-solid fa-square-caret-right fa-3x " style="color:  rgb(73, 72, 72);"  onclick="carrusel(true)"></i></span>
+                        </div>
+                        <h3 class="txt-slider" id="txtboxinf"></h3>
+                    </div>
             </div>
         </section>
     </main>
     <footer class="footer" id="footergrid">
         <div class="alig-item">
-            <a href="http://"><img class="img-redes" src="../img/redeswsp.jpg" alt=""></a>
-            <a href="http://"><img class="img-redes" src="../img/redesLk.jpg"></a>
-            <a href="http://"><img class="img-redes" src="../img/redesGmail.jpg"></a>
-            <a href="http://"><img class="img-redes" src="../img/redesGitHub.jpg"></a>
-            <a href="http://"><img class="img-redes" src="../img/redesDiscord.jpg"></a>
+            <i class="fa-brands fa-square-whatsapp fa-2xl img-redes"></i>
+            <i class="fa-brands fa-linkedin fa-2x img-redes"></i>
+            <i class="fa-solid fa-envelope fa-2x img-redes"></i>
+            <i class="fa-brands fa-github fa-2x img-redes"></i>
+            <i class="fa-brands fa-discord fa-2x img-redes"></i>
         </div>
     </footer>
+    <script src="../js/script.js"></script>
 </body>
 </html>

@@ -168,10 +168,9 @@ b{
     
 }
 .img-redes{
-    width: 2.5rem;
-    aspect-ratio: 1/1;
-    object-fit: contain;
-    border-radius: 4rem;
+    display: grid;
+    justify-content: space-around;
+    align-content: center;
 }
 .img-redes:hover{
     scale: 125%;
@@ -179,15 +178,43 @@ b{
 .link:hover{
     color: cornflowerblue;
 }
-.next{
-    width: 2.5rem;
-    height: 2.5rem;
-    text-align: center;
-}
+
 .next-block{
+    flex-direction: column;
     display: flex;
     justify-content: space-around;
     align-items: center;  
+}
+.icon-3{
+    height: 3rem;
+}
+.icon-5{
+    height: 5rem;
+}
+.icon-7{
+    height: 7rem;
+}
+#box-slider{
+    background-color: rgba(128, 128, 128, 0.356);
+    border: 1px solid black;
+}
+.display-slider{
+    display: grid;
+    grid-template-areas:  
+    "next"
+    "txt"
+    "prev";
+    grid-template-columns:  5rem 1fr 5rem;
+    height: 30rem;
+    width: min(60%,120rem); ;
+    margin: 0px;
+    align-content: center;    
+    justify-items: center;
+}
+.txt-slider{
+ height: 2.5rem;
+ font-family:var(--FontTitle);
+ color: black;
 }
 
 
