@@ -7,7 +7,8 @@ const infoTime = document.getElementById('info-time')
 const sun = document.getElementById('sun')
 function search(){
     const namecity = document.getElementById('namecity')/*"Río Cuarto, AR"*/
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${namecity.value}, AR,&limit=4&units=metric&lang=sp&APPID=e0fa232f8a745d1d019e16b6b1f8779c`)
+    const cogcity = document.getElementById('cogcity')
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${namecity.value}, ${cogcity.value},&limit=4&units=metric&lang=sp&APPID=e0fa232f8a745d1d019e16b6b1f8779c`)
     .then(respuesta => respuesta.json())/*transforma los datos a JSON*/
     .then(data=>{
     console.log(data)
